@@ -28,12 +28,12 @@ jobs:
 
       - name: Run API Tests
         run: |
+          mkdir -p reports
           newman run "collections/reqres-api-tests.postman_collection.json" \
             -e "environments/reqres-environment.postman_environment.json" \
-            -r htmlextra \
+            --env-var "api_key=${{ secrets.API_KEY }}" \
+            -r cli,htmlextra \
             --reporter-htmlextra-export reports/newman-report.html
-        env:
-          api_key: ${{ secrets.API_KEY }}
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
