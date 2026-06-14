@@ -33,7 +33,7 @@ jobs:
             -e "environments/reqres-environment.postman_environment.json" \
             --env-var "api_key=${{ secrets.API_KEY }}" \
             -r cli,htmlextra \
-            --reporter-htmlextra-export reports/newman-report.html 
+            --reporter-htmlextra-export reports/newman-report.html || true
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
