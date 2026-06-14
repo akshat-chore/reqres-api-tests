@@ -40,4 +40,4 @@ jobs:
         if: always()
         with:
           name: newman-report
-          path: reports/newman-report.html
+          path: reports/newman-report.html || true
