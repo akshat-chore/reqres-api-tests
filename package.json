@@ -1,7 +1,7 @@
 {
   "name": "reqres-api-tests",
   "scripts": {
-    "test": "newman run collections/\"Reqres API Tests.postman_collection.json\" -e environments/\"Reqres Environment.postman_environment.json\" -r htmlextra --reporter-htmlextra-export reports/newman-report.html"
+    "test": "newman run collections/reqres-api-tests.postman_collection.json -e environments/reqres-environment.postman_environment.json -r htmlextra --reporter-htmlextra-export reports/newman-report.html"
   },
   "devDependencies": {
     "newman": "^6.1.0",
