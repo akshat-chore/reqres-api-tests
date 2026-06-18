@@ -1,4 +1,4 @@
-# Reqres API Test Suite (version 2 )
+# Reqres API Test Suite (version 3)
 
 A professional API test suite built with Postman and executed via Newman CLI, designed as a portfolio project demonstrating API testing skills for QA/SDET roles.
 
